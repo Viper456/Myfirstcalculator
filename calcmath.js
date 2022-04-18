@@ -4,19 +4,22 @@ let sign = ""; // just sign
 let finish = false;
 
 const digit = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
-const action = ["-", "+", "X", "/"];
+const action = ["-", "+", "X", "/", "%"];
 
 // screen
 const out = document.querySelector(".calc-screen p");
 
-function clearAll() {
+document.querySelector(".btn.ac").onclick = () => { 
    a = ""; // first number and result
    b = ""; // second number
    sign = ""; // just sign
    out.textContent = 0;
-}
+}; // button ac
 
-document.querySelector(".ac").onclick = clearAll(); // button ac
+document.querySelector(".btn.plus-minus").onclick = () => { 
+
+}; // button +/-
+
 document.querySelector(".buttons").onclick = (event) => {
    // no button pressed
    if (!event.target.classList.contains("btn")) return;
@@ -74,6 +77,16 @@ document.querySelector(".buttons").onclick = (event) => {
                return;
             }
             a = a / b;
+            break;
+         case "%":
+            if (b === "0") {
+               out.textContent = "Error";
+               a = "";
+               b = "";
+               sign = "";
+               return;
+            }
+            a = a % b;
             break;
       }
       finish = true;
