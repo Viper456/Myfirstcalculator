@@ -1,2 +1,7 @@
-# Myfirstcalculator
-Simple calculator on JS(using HTML+CSS for form design)
+# My first calculator
+Simple calculator on JS
+Technologies:
+HTML
+CSS
+SCSS
+JavaScript
