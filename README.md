@@ -1,5 +1,5 @@
 # My first calculator
-Simple calculator on JS
+Simple calculator. 
 Technologies:
 HTML,
 CSS,
