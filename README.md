@@ -1,6 +1,6 @@
 # My first calculator
 Simple calculator. 
-Technologies:
+Stack of technologies:
 HTML,
 CSS,
 SCSS,
